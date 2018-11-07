@@ -1,0 +1,89 @@
+﻿@model ProjetoFinal.Models.Usuario
+
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <style>
+        .editor-label {
+            font-weight: bold;
+            color: red;
+            font-size: 16px;
+            margin: 5px;
+            padding: 3px;
+        }
+
+        .editor-field {
+            color: blue;
+            margin: 5px;
+            padding: 3px;
+        }
+    </style>
+
+</head>
+<h2>Cadastro Usuário</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    //CRIA CAMPOS PARA CADASTRO
+    <fieldset>
+        <legend>Dados do Usuário</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(Model => Model.Nome_Usuario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(Model => Model.Nome_Usuario)
+            @Html.ValidationMessageFor(Model => Model.Nome_Usuario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(Model => Model.Idade_Usuario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(Model => Model.Idade_Usuario)
+            @Html.ValidationMessageFor(Model => Model.Idade_Usuario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(Model => Model.Login_Usuario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(Model => Model.Login_Usuario)
+            @Html.ValidationMessageFor(Model => Model.Login_Usuario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(Model => Model.Email_Usuario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(Model => Model.Email_Usuario)
+            @Html.ValidationMessageFor(Model => Model.Email_Usuario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(Model => Model.Senha_Usuario)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(Model => Model.Senha_Usuario)
+            @Html.ValidationMessageFor(Model => Model.Senha_Usuario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(Model => Model.ConfSenha_Usuario)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(Model => Model.ConfSenha_Usuario)
+            @Html.ValidationMessageFor(Model => Model.ConfSenha_Usuario)
+        </div>
+        <p><input type="submit" value="Cadastrar" /></p>
+
+    </fieldset>
+
+    //CHAMAR SCRIPT DE VALIDAÇÃO
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval");
+    }
+}
+

@@ -1,0 +1,66 @@
+﻿@model ProjetoFinal.Models.JoKenPo
+
+@{
+    ViewBag.Title = "JoKenPo";
+}
+
+<h2>JoKenPo Game</h2>
+<!DOCTYPE html>
+<html>
+<body>
+    <fieldset>
+        <legend>Epic Game</legend>
+
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <p><input type="submit" value="Pedra" /></p>
+                </td>
+                <td>
+                    <label>Computador <input type="text" id="CompLabel" name="Comp" disabled /></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><input type="submit" value="Papel" /></p>
+
+                </td>
+                <td>
+                    <label>Player <input type="text" id="PlayerLabel" name="Player" disabled /></label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><input type="submit" value="Tesoura" /></p>
+                </td>
+                <td>
+                    <label>Score <input type="text" id="ScoreLabel" name="Score" disabled /></label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Round <input type="text" id="RoundLabel" name="Round" disabled /></label>
+                </td>
+            </tr>
+
+
+
+        </table>
+
+    </fieldset>
+
+    <p>@Html.ActionLink("Voltar", "Index","Usuario")</p>
+    <!--
+        <button onclick="myFunction()">TesteButton</button>
+
+        <script>
+            function myFunction() {
+                var y = document.getElementsByTagName("Comp")[0].childNodes[0].nodeValue;
+                y.nodeValue = "Pedra";
+            }
+        </script>
+    -->
+</body>
+</html>

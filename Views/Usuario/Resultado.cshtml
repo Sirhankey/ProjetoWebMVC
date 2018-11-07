@@ -1,0 +1,83 @@
+﻿@model ProjetoFinal.Models.Usuario
+
+@{
+    ViewBag.Title = "Resultado Usuários";
+}
+<head>
+    <style>
+        .editor-label {
+            font-weight:bold;
+            color: red;
+            font-size:16px;
+            margin: 5px;
+            padding: 3px;
+        }
+        .editor-field {
+            color: blue;
+            margin: 5px;
+            padding: 3px;
+        }
+    </style>
+
+</head>
+<h2>Listar dados Usuário</h2>
+
+<fieldset>
+    <legend>Dados do Usuário</legend>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(Model => Model.Nome_Usuario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(Model => Model.Nome_Usuario)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(Model => Model.Idade_Usuario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(Model => Model.Idade_Usuario)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(Model => Model.Login_Usuario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(Model => Model.Login_Usuario)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(Model => Model.Email_Usuario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(Model => Model.Email_Usuario)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(Model => Model.Senha_Usuario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(Model => Model.Senha_Usuario)
+    </div>
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(Model => Model.ConfSenha_Usuario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(Model => Model.ConfSenha_Usuario)
+    </div>
+    <p>@Html.ActionLink("Voltar", "Index")</p>
+    <p>
+        <a href="https://www.youtube.com/watch?v=wM7LcpX1IUM">Avançar</a>
+    </p>
+    <p>
+        <!--linkText, actionName, controllerName, routeValues, htmlAttributes-->
+        
+        <p>
+            @Html.ActionLink("Game","Index","JoKenPo")
+    </p>
+       
+
+</fieldset>
+
+
